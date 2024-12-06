@@ -1,0 +1,115 @@
+/* Main Container */
+.statistics-container {
+    padding: 20px;
+    width: 100%;
+}
+/* Header Styles */
+.statistics-header {
+    margin-bottom: 2px;
+    text-align: center;
+    margin-right: 72px;
+    margin-top: 30px;
+    margin-left: 300px;
+}
+
+.statistics-header h1 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Grid Layout */
+.statistics-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    margin-right: 70px;
+
+}
+
+/* Chart Containers */
+.chart-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px 50px 70px 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 300px; /* Minimum height */
+
+
+
+}
+
+.chart-container p {
+    font-size: 12px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+/* Wide containers for top row */
+.chart-container.wide {
+    grid-column: span 2;
+    height: 400px;
+    background-color: white; /* Add this */
+    border: 1px solid #ddd; /* Add this */
+    position: relative; /* Add this */
+    z-index: 1; /* Add this */
+}
+
+.revenueChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .statistics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chart-container.wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container.wide {
+        grid-column: span 1;
+    }
+
+    .statistics-container {
+        padding: 15px;
+    }
+}
+
+/* Optional: Loading State */
+.chart-container.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional: Chart Title Styles */
+.chart-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Optional: Error State */
+.chart-error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 20px;
+}
